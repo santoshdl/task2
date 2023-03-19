@@ -1,4 +1,7 @@
-####  Detection
+####  Task1
+I have provide short Exploratory Data Analysis in Task1.doc
+
+####  Task2
 The dataset D1, D2 and D3 could be treated as detection datasets.  Although the annotations are texts, the problem can be handled in 2 stages.
 
 1. Use a detection model to extract the UI components.
@@ -99,13 +102,17 @@ yolo val model=<path_to_model_weights_file> data=<path_to_dataset_config_yaml>
 
 ### D1 Validation result
 <br>
-<img width="100%" src="images/val_batch0_pred_d1.JPG"></a>
+<img width="100%" src="images/val_batch0_pred_d1.jpg"></a>
+<br>
+<br>
+<br>
+<img width="100%" src="images/val_d1.png"></a>
 <br>
 <br>
 
 ### D2 Validation result
 <br>
-<img width="100%" src="images/val_batch0_pred_d2.JPG"></a>
+<img width="100%" src="images/val_batch0_pred_d2.jpg"></a>
 <br>
 <br>
 
@@ -118,7 +125,12 @@ yolo val model=<path_to_model_weights_file> data=<path_to_dataset_config_yaml>
 
 ### D3 Validation result
 <br>
-<img width="100%" src="images/val_batch0_pred_d3.JPG"></a>
+<img width="100%" src="images/val_batch0_pred_d3.jpg"></a>
+<br>
+<br>
+
+<br>
+<img width="100%" src="images/val_d3.png"></a>
 <br>
 <br>
 
