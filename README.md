@@ -210,3 +210,50 @@ Weights and config file for each model is available at
 https://drive.google.com/drive/folders/156Cxd2QxO92X1OwvlF9R2Di8s3-KjkTJ?usp=share_link
 
 
+## End-2-End Image-to-Text ( Alternative approach )
+
+In this approach, Images are directly converted to desired text. 
+
+Code: Image-Text.ipynb
+
+### Model 
+
+Encoder - google/vit-base-patch16-224-in21k
+
+Decoder - GPT2
+
+
+### Dataset
+
+The model was trained on D1 dataset ( GPU resource constraint ). 200 images were used. A 80:20 train:val split was used.
+
+
+### Training
+
+Trained for 50 epochs. ( Memory and GPU constraint).  The model is underfit after 50 epochs. 
+
+Train log for same is provided in img-to-text.log
+
+```
+TrainOutput(global_step=4000,
+ training_loss=0.03121483838558197, 
+ metrics={'train_runtime': 2929.962, 'train_samples_per_second': 2.73, 'train_steps_per_second': 1.365, 
+ 'train_loss': 0.03121483838558197,
+  'epoch': 50.0
+  })
+
+```
+
+### Inference
+For input image FECC1897-8B91-426B-96F3-29DA91E30721.png
+
+This is the output of model:
+
+```
+header {
+ btn-inactive, btn-inactive, btn-active
+
+```
+
+## Conclusion
+We could used both the approaches depending on the data and complexity.  If dataset size is large, we could use second approach. 1st approach would be applicable with lesser data and more accuracy. Maintaining the parser becomes overhead in that case. 
